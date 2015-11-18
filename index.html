@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>口算练习</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="template.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+    <h1>口算练习</h1>
+</div>
+
+<div class="center" id = "content">
+
+</div>
+
+<script id="table" type="text/html">
+    <table border="1">
+        <tr>
+            <th>第一组</th>
+            <th>第二组</th>
+            <th>第三组</th>
+        </tr>
+
+        {{each numbers as value i}}
+        <tr>
+            <td>{{value[0][0]}} {{value[0][1]}} {{value[0][2]}} =</td>
+            <td>{{value[1][0]}} {{value[1][1]}} {{value[1][2]}} =</td>
+            <td>{{value[2][0]}} {{value[2][1]}} {{value[2][2]}} =</td>
+        </tr>
+        {{/each}}
+
+        <tr>
+            <td>分&nbsp;&nbsp;&nbsp;秒</td>
+            <td>分&nbsp;&nbsp;&nbsp;秒</td>
+            <td>分&nbsp;&nbsp;&nbsp;秒</td>
+        </tr>
+        <tr>
+            <td>对&nbsp;&nbsp;&nbsp;错</td>
+            <td>对&nbsp;&nbsp;&nbsp;错</td>
+            <td>对&nbsp;&nbsp;&nbsp;错</td>
+        </tr>
+    </table>
+</script>
+
+<script type="text/javascript">
+    var numbers = [];
+    for (var i = 0; i<15; i++) {
+        numbers.push([makeNm(), makeNm(), makeNm()]);
+    }
+    var html = template('table', {numbers: numbers});
+    document.getElementById('content').innerHTML = html;
+</script>
+
+</body>
+</html>
