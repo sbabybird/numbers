@@ -20,10 +20,14 @@ body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;
 body{background:#fff;}
 a,a:hover{color:#333;}
 
+body {
+    background-color: #FCE400;
+}
+
 .wrap {
     width: auto;
     height: 60px;
-    background: #dddddd;
+    background: #FFB80D;
 }
 
 .wrap h1 {
@@ -33,7 +37,7 @@ a,a:hover{color:#333;}
 }
 
 .center {
-    background: #eeeeee;
+    background: #FBCB00;
     position: relative;
     width: auto;
     height: 640px;
